@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE KOU>[
+
+<!--Racine-->
+<!ELEMENT famille(parents,frères+,tonton+,tantie+,cousins+,)>
+
+ 
+  <!--designe les géniteurs-->
+<!ELEMENT parents(papa,maman)>
+<!ELEMENT papa(nom,prénoms)>
+
+<!--nom et prénom-->
+<!ELEMENT nom (#PCDATA)>
+<!ELEMENT prénoms (#PCDATA)>
+
+<!ELEMENT maman (#PCDATA)>
+<!ATTLIST maman nom CDATA #REQUIRED>
+<!ATTLIST maman prénoms CDATA #REQUIRED>
+
+
+<!--enfants issus des memes parents-->
+<!ELEMENT frères (#PCDATA)>
+<!ATTLIST frères type (soeur|frère) CDATA #REQUIRED>
+<!ATTLIST frères nom  CDATA #REQUIRED>
+
+<!--designe les frères et soeurs des parent-->
+<!ELEMENT tonton (#PCDATA)>
+<!ELEMENT tantie (#PCDATA)>
+
+<!--désigne les enfants de tonton ou tantie-->
+<!ELEMENT cousins (#PCDATA)>
+<!ATTLIST cousins genre (feminin|masculin) CDATA #REQUIRED>
+<!ATTLIST cousins nom CDATA #REQUIRED>
+<!ATTLIST cousins prénom CDATA #AMPTY
+
+
+
+]
